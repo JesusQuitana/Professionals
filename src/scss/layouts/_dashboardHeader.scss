@@ -1,0 +1,25 @@
+.dashboardHeader {
+    background-color: lighten(#000, 25%);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+    h1 {
+        color: $blanco;
+        font-size: 3rem;
+    }
+    .navLog {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        a {
+            text-decoration: none;
+            background-color: $verde;
+            color: $blanco;
+            padding: .5rem 1rem;
+            font-weight: $dark;
+            &:hover {
+                background-color: darken($verde, 10%);
+            }
+        }
+    }
+}

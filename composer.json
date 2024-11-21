@@ -1,0 +1,23 @@
+{
+    "name": "admin/professionals",
+    "description": "aplicacion ofrecer servicios de profesionales",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Model\\" : "./models",
+            "Controller\\" : "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "JesusQuitana",
+            "email": "jesus08quintanag@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "phpmailer/phpmailer": "^6.9",
+        "intervention/image": "^3.8"
+    }
+}

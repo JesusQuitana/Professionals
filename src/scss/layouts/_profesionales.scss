@@ -1,0 +1,93 @@
+.profesionales, .usuarios {
+    .new {
+        font-size: 1.6rem;
+        &::after {
+            content: "Nuevo";
+        }
+    }
+    .formulario {
+        max-width: 60rem;
+        margin: 0 auto;
+        margin: 1rem auto;
+        img {
+            width: 20rem;
+        }
+    }
+}
+.tabla {
+    &__profesionales {
+        width: 100%;
+        margin: 1rem auto;
+        table-layout: fixed;
+        .editar {
+            color: $negro;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            text-decoration: none;
+            &::after {
+                font: var(--fa-font-solid);
+                content: "\f044";
+            }
+        }
+        .eliminar {
+            color: $negro;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            cursor: pointer;
+            &::after {
+                font: var(--fa-font-solid);
+                content: "\f2ed";
+            }
+        }
+        .ver {
+            color: $negro;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            &::after {
+                font: var(--fa-font-solid);
+                content: "\f0ae";
+            }
+        }
+    }
+}
+#paginacion {
+    margin-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    color: $blanco;
+    font-size: 2.8rem;
+    .btnAnterior, .btnSiguiente {
+        color: $negro;
+        &:hover {
+            cursor: pointer;
+        }
+        &.ocultar {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    .paginacion__numeros {
+        font-weight: $dark;
+    }
+}
+.dark {
+    .tabla {
+        &__profesionales {
+            .editar, .eliminar, .ver {
+                color: $blanco;
+            }
+        }
+    }
+    #paginacion {
+        .btnAnterior, .btnSiguiente {
+            color: $blanco;
+        }
+    }
+}

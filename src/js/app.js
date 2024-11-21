@@ -1,0 +1,10 @@
+import './confirmarToken.js';
+import './inicio.js';
+import './profesionals.js';
+import './projects.js';
+import './proyecto.js';
+import './proyectos.js';
+import './tagsProfesionales.js';
+import './upload_img.js';
+import './users.js';
+import './slider.js';

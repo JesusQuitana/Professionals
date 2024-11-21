@@ -1,0 +1,39 @@
+//PALETA DE COLORES Y FONT
+$azul: #2C289E;
+$azulS: #1741CB;
+$gris : #C1BABA;
+$verde: #71C151;
+$rojo: #C11416;
+$naranja: #F9A628;
+$negro: #1B1B1B;
+$blanco: #FFFFFF;
+
+$fontType: "Poppins", sans-serif;
+$dark: 900;
+$light: 200;
+
+//MIXINS
+@mixin contenedor() {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+@mixin grid($columns, $gap:0) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+@mixin telf() {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet() {
+    @media (min-width: 481px) and (max-width: 800px) {
+        @content;
+    }
+}
+@mixin desktop() {
+    @media (min-width: 801px) {
+        @content;
+    }
+}

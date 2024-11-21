@@ -1,0 +1,76 @@
+.inicioUsuario {
+    .profesionals {
+        @include grid(4, 1rem);
+        .profesional {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 2rem;
+            border: 1px solid $gris;
+            border-radius: 20px;
+            &:hover {
+                background-color: $gris;
+                cursor: pointer;
+                color: $negro;
+            }
+        }
+    }
+    .projectUser {
+        margin-top: 3rem;
+        @include grid(6, 1rem);
+        article {
+            background-color: $azulS;
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            transition: background-color .3s ease, transform .3s ease;
+            h3 {
+                color: $blanco;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: darken($azulS, 10%);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+.nombreProfesionalesSeleccionados {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    li {
+        background-color: $azulS;
+        padding: .5rem 1rem;
+        color: $blanco;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($azulS, 10%);
+        }
+    }
+}
+.modal {
+    label {
+        color: #000;
+    }
+    .descrip {
+        resize: none;
+        height: 10rem;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+    }
+    .zinliDiv, .paypalDiv {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+.dark {
+    .profesionals {
+        margin-top: 2rem;
+        .profesional {
+            &:hover {
+                background-color: lighten($negro, 10%);
+            }
+        }
+    }
+}

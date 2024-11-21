@@ -1,0 +1,41 @@
+.tabla {
+    &__proyectos {
+        width: 100%;
+        margin: 1rem auto;
+        table-layout: fixed;
+        .name {
+            cursor: pointer;
+        }
+        .confirmar {
+            color: #fff;
+            background-color: $naranja;
+            padding: .5rem 1rem;
+            font-weight: $dark;
+            &:hover {
+                cursor: pointer;
+                background-color: darken($naranja, 10%);
+            }
+        }
+        .notconfirmar {
+            color: #fff;
+            background-color: $verde;
+            padding: .5rem 1rem;
+            font-weight: $dark;
+            &:hover {
+                cursor: pointer;
+                background-color: darken($verde, 10%);
+            }
+        }
+    }
+}
+.profesios {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    li {
+        background-color: $azulS;
+        color: $blanco;
+        padding: .5rem 1rem;
+    }
+}

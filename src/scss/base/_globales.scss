@@ -1,0 +1,340 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+html {
+    box-sizing: inherit;
+    font-family: $fontType;
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+}
+.dark {
+    background-color: $negro;
+    h1, h2, h3, p, a, legend, label {
+        color: lighten($gris, 10%);
+    }
+}
+h1, h2, h3, p, a, legend, label {
+    margin: 0;
+    color: $negro;
+    line-height: 1.5;
+    padding: 0;
+}
+h1 {
+    font-weight: $dark;
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+}
+p, a, legend, label {
+    font-size: clamp(1rem, 4vw, 1.6rem);
+}
+li {
+    list-style: none;
+}
+section {
+    h2 {
+        margin-top: 3rem;
+        text-align: center;
+    }
+}
+.contenedor {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.contenedor-min {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.formulario {
+    max-width: 100rem;
+    margin: 4rem auto;
+    padding: 1rem 2rem 1.5rem 2rem;
+    legend {
+        font-weight: $dark;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    &__campo {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        input, .img_name, select {
+            border: 1px solid $gris;
+            border-left: 5px solid $gris;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            &:focus-visible {
+                outline: none;
+            }
+        }
+        label {
+            font-weight: 500;
+        }
+        .img_name {
+            margin-top: 2rem;
+        }
+        .img_name:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #img {
+            display: none;
+        }
+        .img_upload {
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+        textarea {
+            height: 10rem;
+            resize: none;
+            border: 1px solid $gris;
+            border-left: 5px solid $gris;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            &:focus-visible {
+                outline: none;
+            }
+        }
+        &.redes {
+            flex-direction: row;
+            gap: 0;
+            align-items: center;
+            padding: 0;
+            border: 1px solid $gris;
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            .social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 2rem;
+                padding: .8rem;
+                background-color: lighten($azulS, 10%);
+                width: 36px;
+            }
+            input {
+                border: none;
+                border-radius: 0px;
+                border-top-right-radius: .5rem;
+                border-bottom-right-radius: .5rem;
+                flex: 1;
+            }
+        }
+    }
+    &__submit {
+        margin: 1rem auto;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        .disabled {
+            background-color: lighten($verde, 10%);
+        }
+    }
+    &__loading {
+        color: $negro;
+        display: flex;
+        justify-content: center;
+        font-size: 3.2rem;
+    }
+    @include telf {
+        max-width: 95%;
+    }
+    @include tablet {
+        max-width: 95%;
+    }
+}
+table {
+    border: 1px solid $gris;
+    border-collapse: collapse;
+    table-layout: auto;
+    thead {
+        font-weight: $dark;
+        tr {
+            background-color: rgba($gris, .3);
+        }
+    }
+    tbody {
+        tr:nth-child(even) {
+            background-color: rgba($gris, .3);
+        }
+        tr:nth-child(odd) {
+            background-color: rgba($gris, .6);
+        }
+    }
+    td {
+        color: $negro;
+        padding: .5rem 1rem;
+        &:last-child {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.5rem;
+        }
+    }
+}
+.modal {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background-color: rgba($negro, 0.6);
+    display: grid;
+    place-items: center;
+    .card {
+        background-color: $blanco;
+        width: 50rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 20px;
+        .titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .name {
+                font-weight: $dark;
+            }
+            .fa-x {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+        .habilidades {
+            display: flex;
+            gap: .5rem;
+            .habilidad {
+                background-color: $azulS;
+                color: $blanco;
+                padding: .5rem 1rem;
+            }
+        }
+        .redesSociales {
+            display: flex;
+            gap: 1rem;
+            i {
+                font-size: 2rem;
+            }
+        }
+        p, a {
+            color: $negro;
+            text-decoration: none;
+        }
+        img {
+            width: 20rem;
+            display: flex;
+            justify-content: center;
+        }
+        .btn {
+            color: $blanco;
+            text-align: center;
+        }
+    }
+}
+.dark {
+    .formulario {
+        &__campo {
+            input, .img_name, textarea, select {
+                background-color: lighten($negro, 10%);
+                color: $blanco;
+            }
+            &.redes {
+                background-color: lighten($negro, 10%);
+            }
+        }
+        &__loading {
+            color: $blanco;
+        }
+    }
+    table {
+        border: 1px solid lighten($negro, 10%);
+        td {
+            color: $blanco;
+        }
+    }
+}
+.btn {
+    display: inline-block;
+    outline: none;
+    border: none;
+    color: $blanco;
+    padding-bottom: 0;
+    text-decoration: none;
+    padding: .7rem 2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.5px 1.5px 2px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    &.verde {
+        background-color: $verde;
+        color: $blanco;
+        &:hover {
+            background-color: darken($verde, 10%);
+        }
+    }
+    &.rojo {
+        background-color: $rojo;
+        color: $blanco;
+        &:hover {
+            background-color: lighten($rojo, 5%);
+        }
+    }
+    &.naranja {
+        background-color: $naranja;
+        color: $blanco;
+        &:hover {
+            background-color: darken($naranja, 10%);
+        }
+    }
+}
+.alertas {
+    max-width: 80rem;
+    margin: 1rem auto;
+    font-weight: $dark;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .error {
+        background-color: $rojo;
+        color: $blanco;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+    }
+    .exito {
+        background-color: $verde;
+        color: $blanco;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+    }
+}
+.alertas__naranja {
+    background-color: $naranja;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+.darkmode {
+    max-width: 6rem;
+    border: 1px solid $negro;
+    border-radius: 20px;
+    color: $negro;
+    font-size: 1.6rem;
+    padding: .3rem 1rem;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: darken(rgba($gris, 0.4), 10%);
+
+    .fa-moon, .fa-sun {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .select {
+        visibility: visible;
+        opacity: 1;
+    }
+}

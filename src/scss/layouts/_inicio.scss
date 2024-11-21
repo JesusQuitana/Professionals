@@ -1,0 +1,157 @@
+.contacto {
+    h2 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+    picture {
+        display: flex;
+        justify-content: center;
+    }
+    &__campo {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+}
+.boletos {
+    h2 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+    .info {
+        max-width: 800px;
+        margin: 0 auto;
+        @include grid(2, 1rem);
+        place-items: center;
+        p {
+            text-align: justify;
+            line-height: 1.5;
+        }
+    }
+    .beneficio {
+        max-width: 800px;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            ul {
+                li {
+                    color: $negro;
+                    text-align: center;
+                    i {
+                        color: $verde;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
+.profesionals {
+    h2 {
+        margin: 3rem auto;
+        text-align: center;
+    }
+    .profesionalCarrusel {
+        background-color: $azulS;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: .5rem 1rem;
+        .profesionalCarrusel--info {
+            display: flex;
+            justify-content: space-between;
+            p {
+                color:$blanco;
+                font-size: 2rem;
+                font-weight: $dark;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+        .profesionalCarrusel--tags {
+            display: flex;
+            gap: .5rem;
+            overflow: hidden;
+            p {
+                background-color: $azul;
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+                color: $blanco;
+            }
+        }
+    }
+    article {
+        margin: 3rem auto;
+        max-width: 80rem;
+        display: flex;
+        gap: 1.5rem;
+        div {
+            line-height: 1.5;
+            text-align: justify;
+            h3 {
+                text-transform: capitalize;
+                text-align: center;
+                margin: 2rem auto;
+            }
+        }
+    }
+}
+.index {
+    article {
+        max-width: 100rem;
+        margin: 5rem auto;
+        @include grid(2, 1rem);
+        place-items: center;
+        h3 {
+            margin: 2rem auto;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.5;
+        }
+        a {
+            display: flex;
+            margin: 1rem auto;
+            justify-content: center;
+        }
+    }
+}
+.testimonio {
+    margin: 2rem 0;
+    padding: 5rem 0;
+    text-align: center;
+    background-color: $gris;
+    p {
+        font-size: 2.4rem;
+        color: $negro;
+        font-weight: $dark;
+        font-style: italic;
+        span {
+            font-style: normal;
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+    }
+}
+.dark {
+    .beneficio {
+        div {
+            ul {
+                li {
+                    color: $blanco;
+                }
+            }
+        }
+    }
+}

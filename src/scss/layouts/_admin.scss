@@ -1,0 +1,68 @@
+.admin, .inicioUsuario {
+    height: calc(100vh - 5.5rem);
+    display: flex;
+    .dashboard {
+        background-color: lighten(#000, 30%);
+        position: relative;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        a {
+            color: $blanco;
+            text-decoration: none;
+            position: relative;
+            text-align: center;
+            font-size: 2.8rem;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                border-bottom: 4px solid $gris;
+                transition: width .5s ease;
+            }
+            &:hover {
+                color: darken($blanco, 10%);
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    section {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding: 1rem 2rem;
+        width: 100%;
+        h3 {
+            text-align: center;
+            margin: .5rem auto 1rem auto;
+        }
+    }
+    .tags {
+        max-width: 50rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .tag {
+            background-color: $azulS;
+            padding: .5rem 1rem;
+            color: $blanco;
+            cursor: pointer;
+            text-transform: uppercase;
+            &:hover {
+                background-color: darken($azulS, 10%);
+            }
+        }
+    }
+}
+.dark {
+    .admin {
+        .tags {
+            color: $blanco;
+        }
+    }
+}
