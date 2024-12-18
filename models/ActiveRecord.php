@@ -83,7 +83,7 @@ abstract class ActiveRecord {
             }
         }
         catch(Exception $e) {
-            return ["resultado" => false, "error" => "Error: ${e}"];
+            return ["resultado" => false, "error" => "Error: ". $e];
         }
     }
 
@@ -102,7 +102,7 @@ abstract class ActiveRecord {
             }
         }
         catch(Exception $e) {
-            return ["resultado" => false, "error" => "Error: ${e}"];
+            return ["resultado" => false, "error" => "Error: ".$e];
         }
     }
 

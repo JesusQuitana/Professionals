@@ -2,8 +2,7 @@
     <h1>&#9874; Professional'S &#9874;</h1>
     <nav class="navLog">
         <?php
-        session_start();
-        if($_SESSION["login"]) {
+        if(isset($_SESSION["login"])) {
             echo "<a href='/logout'>Cerrar Sesion</a>";
         } else {
             echo '<a href="registro">Registrarse</a><a href="login">Iniciar Sesion</a>';

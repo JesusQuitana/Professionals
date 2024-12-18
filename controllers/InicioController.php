@@ -92,7 +92,7 @@ abstract class InicioController {
     public static function logOut() {
         session_start();
         if($_SESSION["login"]) {
-            $_SESSION = [];
+            session_destroy();
             header("Location: /");
         }
     }

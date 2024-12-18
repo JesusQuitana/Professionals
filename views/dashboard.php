@@ -16,9 +16,9 @@
 </head>
 <body>
 <?php
-    include_once __DIR__ . '/dashboardHeader.php';
+    //debugear(__DIR__ . ' /dashboardHeader.php');
+    include(__DIR__ . '/dashboardHeader.php');
     echo $contenido;
-    include_once __DIR__ . '/dashboardFooter.php';
     ?>
     <script src="/build/js/darkmode.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  

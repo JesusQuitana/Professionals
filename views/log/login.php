@@ -4,7 +4,9 @@
             <legend>Log In</legend>
 
             <div class="alertas">
-                <?php alertas($alertas); ?>
+            <?php if(isset($alertas["error"]) || isset($alertas["exito"])) {
+                    alertas($alertas);
+                } ?>
             </div>
 
             <div class="formulario__campo">
