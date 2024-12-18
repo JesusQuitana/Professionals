@@ -24,11 +24,15 @@ function jsonDebug($json) {
     exit;
 }
 function alertas(array $alertas) {
-    foreach($alertas["error"] as $alerta) {
-        echo "<p class='alerta error'>".$alerta."</p>";
+    if(isset($alertas["error"])) {
+        foreach($alertas["error"] as $alerta) {
+            echo "<p class='alerta error'>".$alerta."</p>";
+        }
     }
-    foreach($alertas["exito"] as $alerta) {
-        echo "<p class='alerta exito'>".$alerta."</p>";
+    if(isset($alertas["exito"])) {
+        foreach($alertas["exito"] as $alerta) {
+            echo "<p class='alerta exito'>".$alerta."</p>";
+        }
     }
 }
 function verificarSession(string $location) {
